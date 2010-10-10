@@ -21,8 +21,8 @@
 	</#if>
 	<#if .vars["project.copyright.${project.name}"]?? && .vars["project.copyright.${project.name}"] != "">
 	<meta name="copyright" content="${.vars["project.copyright.${project.name}"]}">
-	<#elseif copyright?? && copyright != "">
-	<meta name="copyright" content="${copyright}">
+	<#elseif project.copyright?? && project.copyright != "">
+	<meta name="copyright" content="${project.copyright}">
 	<#else>
 	<meta name="copyright" content="(c) ${date?date?string("yyyy")} ${user}">
 	</#if>

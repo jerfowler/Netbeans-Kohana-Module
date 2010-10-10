@@ -9,17 +9,17 @@
  * @author     ${user}
  <#if .vars["project.copyright.${project.name}"]?? && .vars["project.copyright.${project.name}"] != "">
  * @copyright  ${.vars["project.copyright.${project.name}"]}
- <#elseif copyright?? && copyright != "">
- * @copyright  ${copyright}
+ <#elseif project.copyright?? && project.copyright != "">
+ * @copyright  ${project.copyright}
  <#else>
  * @copyright (c) ${date?date?string("yyyy")} ${user}
  </#if>
  <#if .vars["project.license.${project.name}"]?? && .vars["project.license.${project.name}"] != "">
  * @license    ${.vars["project.license.${project.name}"]}
- <#elseif license?? && license != "">
- * @license    ${license}
+ <#elseif project.license?? && project.license != "">
+ * @license    ${project.license}
  <#else>
- * @license    http://kohanaframework.org/license
+ * @license    http://creativecommons.org/licenses/BSD/
  </#if>
  */
 class Controller_${name} extends Controller {
