@@ -18,39 +18,46 @@ This Module currently only has a few file templates:
 
 # Usage
 
-1. Templates
-	Create a new PHP Project or open an existing one. Browse to where you want the new file and click the New File button. 
-	Select one of the new templates under the Kohana 3.x Category.
-	*	Be sure to use all lowercase letters with new file names. The Template will then captitalize the name. 
-	*	If creating a controller within a subdirectory, best to name the file the entire directory structure first so the template populates correctly. Then Refactor the file to rename it.
-		
-		Example, dir: \controller\admin\page name the file admin_page. This will then populate the controller template correctly. Then rename the file to just admin.
+## Templates
 
-## Template variables
+Create a new PHP Project or open an existing one. Browse to where you want the new file and click the New File button. 
+Select one of the new templates under the Kohana 3.x Category.
+
+*	Be sure to use all lowercase letters with new file names. The Template will then captitalize the name. 
+*	If creating a controller within a subdirectory, best to name the file the entire directory structure first so the template populates correctly. Then Refactor the file to rename it.
+	
+Example: 
+
+Directory is \controller\admin\page, name the file admin_page. 
+This will then populate the controller template correctly. 
+Then rename the file to just "admin".
+
+### Template variables
 
 Netbeans provides support for the FreeMarker Template Engine which supports variables. These variables can be set 
 in the *User.properties* file in Template Manager. To open Template Manager, click Tools | Templates menu item. 
 
 User.properties is located under *User Configuration Properties* in the Templates tree structure.
 
-Variables used in the templates:
+### Variables used in the templates:
 
-### These are specified in the Project's properties
+These are specified in the Project's properties
+
 		project.name
 		project.encoding
 
-### A Default is provided by Netbeans, but should probably be modified in User.properties to include more details
+A default user variable is provided to Netbeans by the operating system, but it should probably be modified in User.properties to include more details
 
 		user=Jeremy Fowler <jeremy.f76@gmail.com>
 
-### These must be specified in User.properties
+These can be specified in User.properties
 
 		project.description=Kohana PHP Project
 		project.keywords=Kohana,PHP
 		project.copyright=(c) Jeremy Fowler
 		project.license=http://creativecommons.org/licenses/BSD/
 
-### Unique values can be assigned to projects by appending the project name on the end.
+Unique values can be assigned to projects by appending the project name on the end.
 
 Example Kohana PHP Project named MyProject:
 
@@ -63,5 +70,6 @@ Example Kohana PHP Project named MyProject:
 # More to come...
 
 *	Model Templates: ORM, Sprig, Jelly
-*	Complete Project Template
-*	Other stuff as I learn it.... (suggestion anyone?)
+*	Specialized Controller Templates: AJAX, REST, AUTH, etc...
+*	A Complete Kohana Project Template
+*	Other stuff as I learn it.... (suggestions anyone?)
