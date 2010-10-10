@@ -1,0 +1,63 @@
+<?php defined('SYSPATH') or die('No direct script access.');
+<#assign name = name?replace("_", " ")?capitalize?replace(" ", "_")>
+
+/**
+ * ${name} controller class
+ *
+ * @package    ${project.name}
+ * @category   Controller
+ * @author     ${user}
+ <#if .vars["project.copyright.${project.name}"]?? && .vars["project.copyright.${project.name}"] != "">
+ * @copyright  ${.vars["project.copyright.${project.name}"]}
+ <#elseif copyright?? && copyright != "">
+ * @copyright  ${copyright}
+ <#else>
+ * @copyright (c) ${date?date?string("yyyy")} ${user}
+ </#if>
+ <#if .vars["project.license.${project.name}"]?? && .vars["project.license.${project.name}"] != "">
+ * @license    ${.vars["project.license.${project.name}"]}
+ <#elseif license?? && license != "">
+ * @license    ${license}
+ <#else>
+ * @license    http://kohanaframework.org/license
+ </#if>
+ */
+class Controller_${name} extends Controller {
+
+	/**
+	 * Automatically executed before the controller action. Can be used to set
+	 * class properties, do authorization checks, and execute other custom code.
+	 *
+	 * @return  void
+	 */
+	public function before()
+	{
+		// Before code here
+		return parent::after();
+	}
+
+	/**
+	 * Default action method for the controller
+	 *
+	 * @return  void
+	 */
+	public function action_index()
+	{
+		// Default action code here
+		$this->request->response = View::factory('${name}');
+	}
+
+	/**
+	 * Automatically executed after the controller action. Can be used to apply
+	 * transformation to the request response, add extra output, and execute
+	 * other custom code.
+	 *
+	 * @return  void
+	 */
+	public function after()
+	{
+		// After code here
+		return parent::after();
+	}
+
+} // End Controller_${name}

@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+OpenIDE-Module: org.myorg.kohananetbeans
+OpenIDE-Module-Layer: org/myorg/kohananetbeans/layer.xml
+OpenIDE-Module-Localizing-Bundle: org/myorg/kohananetbeans/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+

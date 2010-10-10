@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN" "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
+<filesystem>
+    <folder name="Templates">
+	<folder name="Kohana 3.x">
+            <attr name="SystemFileSystem.localizingBundle" stringvalue="org.myorg.kohananetbeans.Bundle"/>
+            <file name="Controller" url="templates/Controller.html">
+                <attr name="template" boolvalue="true"/>
+                <attr name="SystemFileSystem.localizingBundle" stringvalue="org.myorg.kohananetbeans.Bundle"/>
+                <attr name="SystemFileSystem.icon" urlvalue="nbresloc:/org/myorg/kohananetbeans/icon.png"/>
+                <attr name="templateWizardURL" urlvalue="nbresloc:/org/myorg/kohananetbeans/templates/Controller_Description.html"/>
+                <attr name="javax.script.ScriptEngine" stringvalue="freemarker"/>
+            </file>
+            <file name="View_HTML5" url="templates/View_HTML5.html">
+                <attr name="template" boolvalue="true"/>
+                <attr name="SystemFileSystem.localizingBundle" stringvalue="org.myorg.kohananetbeans.Bundle"/>
+                <attr name="SystemFileSystem.icon" urlvalue="nbresloc:/org/myorg/kohananetbeans/icon.png"/>
+                <attr name="templateWizardURL" urlvalue="nbresloc:/org/myorg/kohananetbeans/templates/View_HTML5_Description.html"/>
+                <attr name="javax.script.ScriptEngine" stringvalue="freemarker"/>
+            </file>
+            <file name="View_HTML4" url="templates/View_HTML4.html">
+                <attr name="template" boolvalue="true"/>
+                <attr name="SystemFileSystem.localizingBundle" stringvalue="org.myorg.kohananetbeans.Bundle"/>
+                <attr name="SystemFileSystem.icon" urlvalue="nbresloc:/org/myorg/kohananetbeans/icon.png"/>
+                <attr name="templateWizardURL" urlvalue="nbresloc:/org/myorg/kohananetbeans/templates/View_HTML4_Description.html"/>
+                <attr name="javax.script.ScriptEngine" stringvalue="freemarker"/>
+            </file>
+            <file name="View_EMPTY" url="templates/View_EMPTY.html">
+                <attr name="template" boolvalue="true"/>
+                <attr name="SystemFileSystem.localizingBundle" stringvalue="org.myorg.kohananetbeans.Bundle"/>
+                <attr name="SystemFileSystem.icon" urlvalue="nbresloc:/org/myorg/kohananetbeans/icon.png"/>
+                <attr name="templateWizardURL" urlvalue="nbresloc:/org/myorg/kohananetbeans/templates/View_EMPTY_Description.html"/>
+                <attr name="javax.script.ScriptEngine" stringvalue="freemarker"/>
+            </file>
+	</folder>
+    </folder>
+</filesystem>
