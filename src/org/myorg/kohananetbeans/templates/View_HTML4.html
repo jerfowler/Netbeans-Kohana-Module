@@ -1,5 +1,28 @@
-<?php defined('SYSPATH') or die('No direct script access.'); ?>
+<?php defined('SYSPATH') or die('No direct script access.');
 <#assign name = name?replace("_", " ")?capitalize>
+
+/**
+ * ${name} View
+ *
+ * @package    ${project.name}
+ * @category   View
+ * @author     ${user}
+ <#if .vars["project.copyright.${project.name}"]?? && .vars["project.copyright.${project.name}"] != "">
+ * @copyright  ${.vars["project.copyright.${project.name}"]}
+ <#elseif project.copyright?? && project.copyright != "">
+ * @copyright  ${project.copyright}
+ <#else>
+ * @copyright (c) ${date?date?string("yyyy")} ${user}
+ </#if>
+ <#if .vars["project.license.${project.name}"]?? && .vars["project.license.${project.name}"] != "">
+ * @license    ${.vars["project.license.${project.name}"]}
+ <#elseif project.license?? && project.license != "default">
+ * @license    ${project.license}
+ <#else>
+ * @license    http://creativecommons.org/licenses/BSD/
+ </#if>
+ */
+?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>

@@ -1,0 +1,82 @@
+<?php defined('SYSPATH') or die('No direct script access.');
+<#assign name = name?replace("_", " ")?capitalize?replace(" ", "_")>
+
+/**
+ * ${name} ORM class
+ *
+ * @package    ${project.name}
+ * @category   Model
+ * @author     ${user}
+ <#if .vars["project.copyright.${project.name}"]?? && .vars["project.copyright.${project.name}"] != "">
+ * @copyright  ${.vars["project.copyright.${project.name}"]}
+ <#elseif project.copyright?? && project.copyright != "">
+ * @copyright  ${project.copyright}
+ <#else>
+ * @copyright (c) ${date?date?string("yyyy")} ${user}
+ </#if>
+ <#if .vars["project.license.${project.name}"]?? && .vars["project.license.${project.name}"] != "">
+ * @license    ${.vars["project.license.${project.name}"]}
+ <#elseif project.license?? && project.license != "default">
+ * @license    ${project.license}
+ <#else>
+ * @license    http://creativecommons.org/licenses/BSD/
+ </#if>
+ */
+class Model_${name} extends ORM
+{
+//	protected $_table_name  = '${name?lower_case}';
+//	protected $_db = 'default';
+//	protected $_primary_key = 'id';
+//	protected $_primary_val = 'name';
+//	protected $_table_names_plural = TRUE;
+//	protected $_sorting = array('id' => 'ASC');
+//	protected $_foreign_key_suffix = '_id';
+
+	// ORM defaults to db introspection to find columns and info
+//	protected $_table_columns = array(
+//		'column_name'   => array('data_type' => 'int',    'is_nullable' => FALSE),
+//		'column_name2'  => array('data_type' => 'string', 'is_nullable' => TRUE),
+//	);
+
+//	protected $_ignored_columns = array();
+
+	// The column used for storing the creation date. Use format => TRUE to store a timestamp.
+//	protected $_created_column = array(
+//		'column' => 'created',
+//		'format' => TRUE
+//	);
+
+	// The column used for storing the modified date. In this case, a string specifying a date() format is used.
+//	protected $_updated_column = array(
+//		'column' => 'modified',
+//		'format' => 'm/d/Y'
+//	);
+
+	/* Relationships */
+
+	// belong_to is used in the model where the foreign key is located
+//	protected $_belongs_to = array(
+//		'field' => array('foreign_key' => 'field_id'),
+//	);
+
+	// has_one and has_many are used to refer to the model that has the foreign key
+//	protected $_has_one = array(
+//		'field' => array(),
+//	);
+
+//	protected $_has_many = array(
+//		'fields' => array(),
+//		// has_many "through" for many-to-many relationships
+//		'm2m'    => array('through' => 'xtable',
+//		                  'foreign_key' => 'field_id',
+//				  'far_key' => 'field2_id'),
+//	);
+
+	/* Validation */
+
+//	protected $_rules = array();
+//	protected $_callbacks = array();
+//	protected $_filters = array();
+//	protected $_labels = array();
+
+} // End Model_${name}

@@ -1,8 +1,18 @@
 # Netbeans Module for the [Kohana PHP Framework](http://kohanaframework.org/).
 
-This Module currently only has a few file templates:
+Version 1.1, Built for Nebeans 6.9.1
+
+This Module currently only has:
+
+## Project
+
+*	Sample Kohana 3 Project
+
+## Templates
 
 *	Controller
+*	Controller (AJAX)
+*	Model (ORM)
 *	View (HTML5)
 *	View (HTML4)
 *	View (EMPTY)
@@ -17,6 +27,17 @@ This Module currently only has a few file templates:
 6. Follow along with the prompts to install
 
 # Usage
+
+## Projects
+
+Create a new project in Netbeans, Select the PHP Category and choose Kohana 3 Project
+
+Be sure to pull for latest updates
+		git pull 
+		
+Then download the latest core and modules
+		git submodule init 
+		git submodule update 
 
 ## Templates
 
@@ -69,7 +90,6 @@ Example Kohana PHP Project named MyProject:
 
 # More to come...
 
-*	Model Templates: ORM, Sprig, Jelly
-*	Specialized Controller Templates: AJAX, REST, AUTH, etc...
-*	A Complete Kohana Project Template
+*	More Model Templates: Sprig, Jelly, Hive
+*	More Specialized Controller Templates: REST, AUTH, etc...
 *	Other stuff as I learn it.... (suggestions anyone?)

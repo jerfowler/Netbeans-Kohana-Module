@@ -4,11 +4,25 @@
     <folder name="Templates">
 	<folder name="Kohana 3.x">
             <attr name="SystemFileSystem.localizingBundle" stringvalue="org.myorg.kohananetbeans.Bundle"/>
-            <file name="Controller" url="templates/Controller.html">
+            <file name="Controller_Basic" url="templates/Controller_Basic.html">
                 <attr name="template" boolvalue="true"/>
                 <attr name="SystemFileSystem.localizingBundle" stringvalue="org.myorg.kohananetbeans.Bundle"/>
                 <attr name="SystemFileSystem.icon" urlvalue="nbresloc:/org/myorg/kohananetbeans/icon.png"/>
-                <attr name="templateWizardURL" urlvalue="nbresloc:/org/myorg/kohananetbeans/templates/Controller_Description.html"/>
+                <attr name="templateWizardURL" urlvalue="nbresloc:/org/myorg/kohananetbeans/templates/Controller_Basic_Description.html"/>
+                <attr name="javax.script.ScriptEngine" stringvalue="freemarker"/>
+            </file>
+            <file name="Controller_AJAX" url="templates/Controller_AJAX.html">
+                <attr name="template" boolvalue="true"/>
+                <attr name="SystemFileSystem.localizingBundle" stringvalue="org.myorg.kohananetbeans.Bundle"/>
+                <attr name="SystemFileSystem.icon" urlvalue="nbresloc:/org/myorg/kohananetbeans/icon.png"/>
+                <attr name="templateWizardURL" urlvalue="nbresloc:/org/myorg/kohananetbeans/templates/Controller_AJAX_Description.html"/>
+                <attr name="javax.script.ScriptEngine" stringvalue="freemarker"/>
+            </file>
+            <file name="Model_ORM" url="templates/Model_ORM.html">
+                <attr name="template" boolvalue="true"/>
+                <attr name="SystemFileSystem.localizingBundle" stringvalue="org.myorg.kohananetbeans.Bundle"/>
+                <attr name="SystemFileSystem.icon" urlvalue="nbresloc:/org/myorg/kohananetbeans/icon.png"/>
+                <attr name="templateWizardURL" urlvalue="nbresloc:/org/myorg/kohananetbeans/templates/Model_ORM_Description.html"/>
                 <attr name="javax.script.ScriptEngine" stringvalue="freemarker"/>
             </file>
             <file name="View_HTML5" url="templates/View_HTML5.html">
@@ -33,5 +47,16 @@
                 <attr name="javax.script.ScriptEngine" stringvalue="freemarker"/>
             </file>
 	</folder>
+        <folder name="Project">
+            <folder name="PHP">
+                <file name="Kohana_ProjectProject.zip" url="Kohana_ProjectProject.zip">
+                    <attr name="displayName" bundlevalue="org.myorg.kohananetbeans.Bundle#Templates/Project/PHP/Kohana_ProjectProject.zip"/>
+                    <attr name="instantiatingIterator" methodvalue="org.myorg.kohananetbeans.Kohana_ProjectWizardIterator.createIterator"/>
+                    <attr name="instantiatingWizardURL" urlvalue="nbresloc:/org/myorg/kohananetbeans/Kohana_ProjectDescription.html"/>
+                    <attr name="template" boolvalue="true"/>
+		    <attr name="SystemFileSystem.icon" urlvalue="nbresloc:/org/myorg/kohananetbeans/icon.png"/>
+                </file>
+            </folder>
+        </folder>
     </folder>
 </filesystem>

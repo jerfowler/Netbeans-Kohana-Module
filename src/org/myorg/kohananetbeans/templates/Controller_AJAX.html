@@ -16,13 +16,30 @@
  </#if>
  <#if .vars["project.license.${project.name}"]?? && .vars["project.license.${project.name}"] != "">
  * @license    ${.vars["project.license.${project.name}"]}
- <#elseif project.license?? && project.license != "">
+ <#elseif project.license?? && project.license != "default">
  * @license    ${project.license}
  <#else>
  * @license    http://creativecommons.org/licenses/BSD/
  </#if>
  */
 class Controller_${name} extends Controller {
+
+	/**
+	 * @var  array  values passed to the request as a json formated string
+	 */
+	protected $_json_vars = array();
+
+	/**
+	 * Setter method to add a name/value pair to the response json string
+	 *
+	 * @param string $name
+	 * @param mixed $value
+	 * @return mixed
+	 */
+	public function add($name, $value)
+	{
+		return $this->_json_vars[$name] = $value;
+	}
 
 	/**
 	 * Automatically executed before the controller action. Can be used to set
@@ -32,7 +49,11 @@ class Controller_${name} extends Controller {
 	 */
 	public function before()
 	{
-		// Before code here
+		// Redirect to the home page if not a valid AJAX request
+		if ( ! Request::$is_ajax )
+		{
+			$this->request->redirect(Url::base(FALSE, TRUE));
+		}
 		return parent::after();
 	}
 
@@ -44,7 +65,7 @@ class Controller_${name} extends Controller {
 	public function action_index()
 	{
 		// Default action code here
-		$this->request->response = View::factory('${name}');
+		$this->add('result', View::factory('${name}'));
 	}
 
 	/**
@@ -56,7 +77,8 @@ class Controller_${name} extends Controller {
 	 */
 	public function after()
 	{
-		// After code here
+		// Encode the array and send it as the response
+		$this->request->response = json_encode($this->_json_vars);
 		return parent::after();
 	}
 
